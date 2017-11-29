@@ -35,7 +35,7 @@
 			<div class="content content--fixed">
 				<header class="codrops-header">
 					<nav class="navbar row mb-5">
-						<a class="nav-link mr-auto col-xs-4 col-3" href="#">Logo Button</a>
+						<a class="nav-link ml-auto col-xs-4 col-3" href="#">Logo Button</a>
 						<ul class="navbar-nav ml-auto col-xs-2">
 							<li class="nav-item">
 								<a class="nav-link text-dark" href="#">Services</a>
@@ -63,15 +63,66 @@
 			<div class="slideshow">
 				<div class="slides">
 					<div class="slide slide--current">
-						<div class="slide__img" style="background-image: url(assets/images/croppedwallbg.png)"></div>
+						<div class="slide__img" style="background-image: url(assets/images/croppedwallbg.png )"></div>
+						<h2 class="slide__title mr-auto mb-3 mt-5">Intuitive Design</h2>
 						<h2 class="slide__title">pascettiCode</h2>
-						<p class="slide__desc text-white">Greetings</p>
+						<h2 class="slide__title ml-auto mt-3">Creative Insight</h2>
+						<p class="slide__desc text-dark">Greetings</p>
 						<a class="slide__link" href="#">Explore</a>
 					</div>
 					<div class="slide">
-						<div class="slide__img" style="background-image: url(assets/images/cool2.png)"></div>
-						<h2 class="slide__title">About Us</h2>
-						<p class="slide__desc text-white">Lorem ipsum dolor amet cray heirloom salvia, flexitarian lumbersexual kombucha kale chips normcore synth PBR&B fixie neutra hoodie. Tacos portland blog, organic thundercats synth cardigan hot chicken cred. Authentic jianbing kogi retro typewriter bespoke man bun wayfarers stumptown cronut austin post-ironic vape vegan tumblr.</p>
+						<div class="slide__img" style="background-image: url(assets/images/drywall.jpeg)"></div>
+						<h2 class="slide__title">Services</h2>
+						<p class="slide__desc text-white">Mobile First Responsive Design Full-stack Web Development</p>
+						<div class="container-fluid d-flex">
+						<div class="row d-flex justify-content-between align-items-center">
+
+							<div class = "col-sm col-lg-3 ">
+								<div class="thumbnail text-center">
+									<div>
+										<h5 class="font-weight-bold">Elegant and Functional</h5>
+										<h6 class="font-weight-bold">UI|UX</h6>
+									</div>
+									<figure class = " figure-caption border rounded">
+										<figcaption class="text-center text-dark">
+											Let's get crazy. Isn't it great to do something you can't fail at? Let's make a happy little mountain now. You don't have to be crazy to do this but it does help. If you don't like it - change it. It's your world.
+										</figcaption>
+										<img src="http://fillmurray.com/50/50" class="figure-img img-fluid rounded" alt="placeholderimg." />
+									</figure>
+								</div>
+							</div>
+
+							<div class = "col-sm col-lg-3 py-5 ">
+								<div class="thumbnail text-center">
+									<div>
+										<h5 class="font-weight-bold">Mobile Web App</h5>
+										<h6 class="font-weight-bold">Creation and Conversion</h6>
+									</div>
+									<figure class = " figure-caption border rounded ">
+										<figcaption class="text-center text-dark">
+											That's a crooked tree. We'll send him to Washington. Just let this happen. We just let this flow right out of our minds. Just think about these things in your mind and drop em' on canvas. And just raise cain. Isn't it great.
+										</figcaption>
+										<img src="http://fillmurray.com/50/50" class="figure-img img-fluid rounded" alt="placeholderimg." />
+									</figure>
+								</div>
+							</div>
+
+							<div class = "col-sm col-lg-3">
+								<div class="thumbnail text-center">
+									<div>
+										<h5 class="font-weight-bold">Custom WordPress</h5>
+										<h6 class="font-weight-bold">CMS Solutions</h6>
+									</div>
+									<figure class = " figure-caption border rounded">
+										<figcaption class="text-center text-dark">
+											These trees are so much fun. I get started on them and I have a hard time stopping. You can create beautiful things - but you have to see them in your mind first. We need dark in order to show light.
+										</figcaption>
+										<img src="http://fillmurray.com/50/50" class="figure-img img-fluid rounded" alt="placeholderimg." />
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
 						<a class="slide__link" href="#">Portfolio</a>
 					</div>
 					<div class="slide">
@@ -89,22 +140,35 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-12">
 										<div class="container">
-											<form id="contact" action="" method="post">
-												<fieldset>
-													<input placeholder="name" type="text" id="name" name="name" tabindex="1" required autofocus>
-												</fieldset>
-												<fieldset>
-													<input placeholder="email" type="email" id="email" name="email" tabindex="2" required>
-												</fieldset>
-												<fieldset>
-													<input placeholder="phone" type="tel" id="phone" name="phone" tabindex="3" required>
-												</fieldset>
-												<fieldset>
-													<input placeholder="massage" type="tel" id="message" name="message" tabindex="5" required>
-												</fieldset>
-												<fieldset>
-													<a class="slide__link" href="#">Send Away!</a>
-												</fieldset>
+											<form id="contactform" action="php/mailer.php" method="post" novalidate>
+												<div class="form-group">
+													<label for="nameinput"><strong>Your Name</strong></label>
+													<input type="text" class="form-control" id="nameinput" name="nameinput" aria-describedby="emailHelp" placeholder="Enter your name">
+												</div>
+												<div class="form-group">
+													<label for="emailinput"><strong>Email Address</strong></label>
+													<input type="email" class="form-control" id="emailinput" name="emailinput" placeholder="Enter your email">
+												</div>
+												<div class="form-group">
+													<label for="phoneinput"><strong>Phone Number</strong></label>
+													<input type="text" class="form-control" id="phoneinput" name="phoneinput" placeholder="(505)-555-5555">
+												</div>
+												<div class="form-group">
+													<label for="companynameinput"><strong>Company Name</strong></label>
+													<input type="text" class="form-control" id="companynameinput" name="companynameinput" placeholder="Company Name">
+												</div>
+												<div class="form-group">
+													<label for="subjectinput"><strong>Subject</strong></label>
+													<input type="text" class="form-control" id="subjectinput" name="subjectinput" placeholder="Subject">
+												</div>
+												<div class="form-group">
+													<label for="servicesinput"><strong>Services You Are Interested In</strong></label>
+													<textarea class="form-control" id="servicesinput" name="servicesinput" rows="3"></textarea>
+												</div>
+												<!--------GOOGLE RECAPTCHA----------->
+												<div class="g-recaptcha" data-sitekey="6LeZljoUAAAAAMTm6tbn-MrVytzhzsEW1JnNHW0z"></div>
+												<button type="submit" class="btn btn-primary slide__link">Bring it to Life</button>
+
 											</form>
 										</div>
 									</div>
